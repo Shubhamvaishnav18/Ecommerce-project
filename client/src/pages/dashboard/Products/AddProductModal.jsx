@@ -35,7 +35,7 @@ export default function AddProductModal({ onClose, onSuccess }) {
         }
 
         await axios.post(
-            "http://localhost:5000/api/products",
+            "https://ecommerce-project-backend-wine.vercel.app/api/products",
             formData
         );
 

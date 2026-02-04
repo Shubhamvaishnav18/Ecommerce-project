@@ -8,7 +8,7 @@ export default function Login() {
   const navigate = useNavigate();
 
   const submit = async () => {
-    await axios.post("http://localhost:5000/api/auth/login", { email });
+    await axios.post("https://ecommerce-project-backend-wine.vercel.app/api/auth/login", { email });
     localStorage.setItem("email", email);
     navigate("/otp");
   };

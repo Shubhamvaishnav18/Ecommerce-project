@@ -25,7 +25,7 @@ export default function OTP() {
 
   const verify = async () => {
     try {
-      await axios.post("http://localhost:5000/api/auth/verify-otp", {
+      await axios.post("https://ecommerce-project-backend-wine.vercel.app/api/auth/verify-otp", {
         email: localStorage.getItem("email"),
         otp: otp.join(""),
       });

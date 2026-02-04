@@ -49,7 +49,7 @@ export default function EditProductModal({
         }
 
         await axios.put(
-            `http://localhost:5000/api/products/${product._id}`,
+            `https://ecommerce-project-backend-wine.vercel.app/api/products/${product._id}`,
             formData
         );
 
@@ -139,7 +139,7 @@ export default function EditProductModal({
                                         className="relative w-16 h-16 border border-[#DCDFE3] rounded-md overflow-hidden"
                                     >
                                         <img
-                                            src={`http://localhost:5000/uploads/${img}`}
+                                            src={`https://ecommerce-project-backend-wine.vercel.app/uploads/${img}`}
                                             className="w-full h-full object-contain"
                                         />
 

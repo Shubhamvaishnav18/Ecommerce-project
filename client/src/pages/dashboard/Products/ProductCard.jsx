@@ -10,7 +10,7 @@ export default function ProductCard({ product, refresh, triggerToast }) {
 
     const remove = async () => {
         await axios.delete(
-            `http://localhost:5000/api/products/${product._id}`
+            `https://ecommerce-project-backend-wine.vercel.app/api/products/${product._id}`
         );
         setShowDelete(false);
         refresh();
@@ -19,7 +19,7 @@ export default function ProductCard({ product, refresh, triggerToast }) {
 
     const togglePublish = async () => {
         await axios.patch(
-            `http://localhost:5000/api/products/${product._id}/publish`
+            `https://ecommerce-project-backend-wine.vercel.app/api/products/${product._id}/publish`
         );
         refresh();
     };
@@ -27,7 +27,7 @@ export default function ProductCard({ product, refresh, triggerToast }) {
 
     const images = product.images?.length
         ? product.images.map(
-            (img) => `http://localhost:5000/uploads/${img}`
+            (img) => `https://ecommerce-project-backend-wine.vercel.app/uploads/${img}`
         )
         : ["/placeholder.png"];
 
